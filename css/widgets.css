@@ -1,0 +1,176 @@
+/* Boxes template */
+
+.lab404-related-posts-container {
+    font-family: 'Segoe UI_', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+}
+.lab404-related-posts-container .tile {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: #eeeeee;
+    box-shadow: inset 0px 0px 1px #FFFFCC;
+    height: 180px;
+    width: 120px;
+}
+.lab404-related-posts-container .tile:hover {
+    outline: #999999 solid 3px;
+}
+.lab404-related-posts-container .tile:active {
+    outline: 0;
+}
+.lab404-related-posts-container .tile.double {
+    width: 240px;
+}
+.lab404-related-posts-container .tile .tile-content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.lab404-related-posts-container .tile .tile-content.image {
+    //width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+.lab404-related-posts-container .tile .tile-content:first-child {
+    display: block;
+}
+.lab404-related-posts-container img {
+    height: 100% !important;
+}
+.lab404-related-posts-container .bg-dark {
+    background-color: #333333 !important;
+}
+.lab404-related-posts-container .brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 29px;
+    margin: 0;
+}
+.lab404-related-posts-container .brand.opacity {
+    opacity: .7;
+}
+.lab404-related-posts-container .brand .text {
+    display: block;
+    background: transparent;
+    color: #ffffff;
+    margin: 4px 5px;
+    font-size: 10pt !important;
+    line-height: 10pt !important;
+}
+.lab404-related-posts-container .brand .text a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.lab404-related-posts-clear-all{
+    display: inline-block;
+    width: 99%;
+    height: 17px;
+    font-size: 12px !important;
+    text-align: -webkit-right !important;
+    text-align: right;
+}
+#lab404-related-posts_showonhover{
+    visibility:hidden;
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    cursor:default;
+    position:absolute;
+    text-align:center;
+    width: 280px;
+    z-index:100;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 10px 10px 10px;
+}
+#lab404-related-posts_close_div{
+    top:6px;
+    right:6px;
+    position:absolute;
+}    
+.lab404-related-posts_showdiv{
+    width:310px;
+    float: right;
+}
+
+/* List template */
+.trex-clear-all{
+    display: inline-block;
+    width: 99%;
+    height: 17px;
+    font-size: 12px !important;
+    text-align: -webkit-right !important;
+    text-align: right;
+}
+#trex_showonhover{
+    visibility:hidden;
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    cursor:default;
+    position:absolute;
+    text-align:center;
+    width: 235px;
+    margin-top: 2px;
+    z-index:100;
+    -moz-border-radius: 10px;
+    border-radius: 15px;
+    padding: 5px 5px 5px;
+}
+#trex_close_div{
+    top:6px;
+    right:6px;
+    position:absolute;
+}    
+.trex_showdiv{
+    width:250px;
+}
+
+.lab404_list_container {
+    width:100%;
+    font-size: 12px !important;
+    border:1px solid #999999;
+    overflow: hidden;
+    display: inline-block;
+}
+.lab404_list_container a{
+    font-size: 15px !important;
+    font-family: 'Segoe UI_', 'Open Sans', Verdana, Arial, Helvetica, sans-serif !important;
+    text-decoration: none;
+    color: #000 !important;
+}
+.lab404_list_item {
+    margin-bottom: 2px;
+    padding: 5px;
+    font-size: 17px;
+    max-height: 53px;
+    width: 100%;
+    float: left;
+    vertical-align: bottom;
+    border-top: 1px dashed #999999;
+}
+.lab404_list_item:hover{
+    background-color: #F5FFFF;
+}
+img.lab404_list_item_image {
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: 10px;
+}
+.lab404_list_item_meta{
+    font-style: italic;
+    font-size: 12px;
+}
