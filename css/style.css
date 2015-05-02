@@ -1,0 +1,10 @@
+.shortcode_area_div{
+    border: 1px solid grey;
+    background: aliceblue;
+    border-radius: 8px;
+    color: #000;
+    padding: 18px;
+    font-size: 15px;
+    display: block;
+    width: 90%;
+}
