@@ -40,6 +40,9 @@ Nothing for now
 
 == Screenshots ==
 
+1. Related posts template - list
+2. Related posts template - boxes
+3. Related posts configuration page
 
 == Changelog ==
 
