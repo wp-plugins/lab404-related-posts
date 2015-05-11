@@ -3,7 +3,7 @@
 Plugin Name: Lab404 Related Posts
 Plugin URI: http://lab404.net
 Description: Show related posts in nice format with image. Plugin is fully configurable and easy to use.
-Version: 1.0
+Version: 1.1
 Author: Ivan M
 */
 
@@ -34,8 +34,6 @@ Class lab404_related_posts{
         // create shortcode function
         add_shortcode( 'lab404-related-posts', array($this, 'lab404_related_posts_shortcode') );
         // content filter - for related posts
-        
-        // TODO: is active check can be placed here
         add_filter( 'the_content', array($this, 'lab404_related_posts_content_filter') );
     }
     
@@ -126,9 +124,6 @@ Class lab404_related_posts{
         // get options
         $all_options = $this->api()->GetAllOptions();
         $enable_related_posts = $this->api()->GetSingleOption($all_options,'enable_related_posts');
-        if(!$enable_related_posts){
-            $enable_related_posts = 1;
-        }
         
         $related_posts_template = $this->api()->GetSingleOption($all_options,'related_posts_template');
         if(!$related_posts_template){
@@ -222,6 +217,12 @@ Class lab404_related_posts{
             // get template option
             $all_options = $this->api()->GetAllOptions();
             $related_posts_template = $this->api()->GetSingleOption($all_options,'related_posts_template');
+            // check is enabled
+            $enable_related_posts = $this->api()->GetSingleOption($all_options,'enable_related_posts');
+            if(!$enable_related_posts){
+                $enable_related_posts = 1;
+            }
+            
             $defined_cols = $this->api()->GetSingleOption($all_options,'related_article_cols');
             $related_posts_title = ($this->api()->GetSingleOption($all_options,'related_article_widget_title')) ? $this->api()->GetSingleOption($all_options,'related_article_widget_title') : 'Related posts'; 
             if(!$related_posts_template){
@@ -230,10 +231,11 @@ Class lab404_related_posts{
             if(!$defined_cols){
                 $defined_cols = 2;
             }
-            ob_start();
-            include( plugin_dir_path( __FILE__ ) . 'templates/'.$related_posts_template.'_tpl.php' );
-            
-            $content .= ob_get_clean();
+            if($enable_related_posts === "1"){
+                ob_start();
+                include( plugin_dir_path( __FILE__ ) . 'templates/'.$related_posts_template.'_tpl.php' );
+                $content .= ob_get_clean();
+            }
         }
         
         return $content;

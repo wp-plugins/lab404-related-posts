@@ -3,7 +3,7 @@ Contributors: ivan.m89
 Tags: related posts, similar posts, related articles, similar articles, related posts shortcode, related box, related posts list, link building, links, internal links, posts, related post with thumbnail, related-links, thumbnails
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Nothing for now
 3. Related posts configuration page
 
 == Changelog ==
+
+= 1.1 2015-05-05 =
+* There was the bug related with disabling related posts below article, it is fixed now.
 
 = 1.0 2015-04-30 =
 * Initial release
